@@ -1,0 +1,183 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5vw;
+    font-family: 'Emblema One', cursive;
+}
+
+body {
+    background: radial-gradient(rgb(19, 129, 0), black);
+    background-size: cover;
+    color: red;
+    padding: 5%;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 10vw;
+        -webkit-text-stroke: white 1px;
+        text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    #outer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        row-gap: 5vmax;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        width: 15%;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+    #other {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #otherBox {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   row-gap: 20px;
+}
+
+figure {
+width: 45%;
+margin: 0px;
+transition: width 0.75s;
+text-indent: 0px;
+}
+
+figcaption {
+    margin-top: 33vmax;
+}
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+    }
+
+
+    /*below here deals with feature*/
+
+#cardBox {
+    position: relative;
+    width: 45vmax;
+    height: 33vmax;
+z-index: 1;
+background: radial-gradient(rgb(19, 129, 0), black);
+border-radius: 15px;
+}
+
+#back, #deckBack, #card {
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    left: 0%;
+bottom: 0%;
+}
+
+#deckBack {
+    z-index: 0;
+    transition: left 0.1s;
+}
+
+#back {
+    z-index: 2;
+transform: rotateY('0deg');
+}
+
+#card {
+    z-index: 1;
+    transform: rotateY('0deg');
+}
+
+#card, #back {
+    transition: transform 0.5s, left 0.5s;
+    transition-timing-function: linear;
+}
+
+
+button {
+    background-color: transparent;
+    padding: 5px;
+    border: solid white 4px;
+    color: white;
+    border-radius: 15px;
+    z-index: 20;
+    text-align: center;
+    font-size: 1em;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+cursor: pointer;
+}
+
+
+button:active {
+    border-color: black;
+    color: red;
+}
+
+#cardCount {
+    color: #888888;
+    position: relative;
+    top: 20px;
+}
+
+#other button {
+    background-color: black;
+    color: red;
+}
+#other button:active {
+border-color: green;
+color: white;
+}
+
+
+@media screen and (max-width: 1000px) {
+    * {
+        font-size: 1.5vh;
+    }
+    #container {
+        width: 85%;
+    }
+    #retrieve {
+        width: 100%;
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #container {
+    width: 100%;
+}
+#remove {width: 100%;
+flex-direction: row;}
+}

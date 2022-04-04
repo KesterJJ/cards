@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Cards</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="heading">Cards</h1>
+    </header>
+    <br>
+    <div id="outer">
+        <div id="remove" class="column">
+            <button onclick="takeAway()">Remove Current Card</button>
+            <button onclick="removeSuit('clubs')">Remove Clubs</button>
+            <button onclick="removeSuit('spades')">Remove Spades</button>
+            <button onclick="removeSuit('diamonds')">Remove Diamonds</button>
+            <button onclick="removeSuit('hearts')">Remove Hearts</button>
+        </div>
+        <div id="container">
+            <div id="cardBox">
+                <figure>
+                    <img id="deckBack" src="img/back.jpg" alt="Deck of cards">
+                    <img id="back" src="img/back.jpg" alt="Back of card">
+                    <img id="card" alt="Card">
+                    <figcaption id="cardCount">Cards: 52</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div id="retrieve" class="column">
+            <button onclick="takeInLast()">Retrieve Last Card</button>
+            <button onclick="takeInBottom()">Retrieve Bottom Card</button>
+            <button onclick="takeInRandom()">Retrieve Random Card</button>
+            <button onclick="retrieveSuit('clubs')">Retrieve Clubs</button>
+            <button onclick="retrieveSuit('spades')">Retrieve Spades</button>
+            <button onclick="retrieveSuit('diamonds')">Retrieve Diamonds</button>
+            <button onclick="retrieveSuit('hearts')">Retrieve Hearts</button>
+        </div>
+        <div id="other">
+            <div id="otherBox">
+                <button onclick="shuffleDeck()">Shuffle Deck</button>
+                <button onclick="showCard()">Show Card</button>
+                <button onclick="hideCard()">Hide Card</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
